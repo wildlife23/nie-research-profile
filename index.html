@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17372c">
+  <meta name="description" content="Jeong-Woo Yoo (유정우), researcher at the National Institute of Ecology, Republic of Korea. Research interests: herpetology, endangered species recovery, ecological modeling, and conservation.">
+  <title>Jeong-Woo Yoo (유정우) | Research Profile · NIE</title>
+  <style>
+    :root {
+      --ink: #17372c; --deep: #11271f; --forest: #244c3e; --moss: #60816c;
+      --sage: #dbe6d5; --paper: #f7f6ef; --white: #fffefa; --muted: #697b6e;
+      --line: #d5ded0; --accent: #b56e4a; --gold: #d7ad76;
+      --shadow: 0 24px 64px rgba(13, 35, 24, .09);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif; line-height:1.68; -webkit-font-smoothing:antialiased; }
+    a { color: inherit; }
+    a:hover { text-decoration-color:var(--accent); }
+    button { font: inherit; cursor:pointer; }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .skip { position:absolute; left:20px; top:-80px; background:white; z-index:99; padding:12px 18px; border-radius:8px; }
+    .skip:focus { top:14px; }
+    .wrap { max-width:1180px; margin:0 auto; padding:0 34px; }
+    .topbar { position:sticky; z-index:20; top:0; background:rgba(247,246,239,.96); backdrop-filter:blur(14px); border-bottom:1px solid rgba(36,76,62,.12); }
+    .topbar-inner { min-height:78px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .brand { display:flex; align-items:center; gap:13px; text-decoration:none; font-size:12px; text-transform:uppercase; font-weight:800; letter-spacing:.13em; line-height:1.4; }
+    .brand-mark { display:grid; place-items:center; flex-shrink:0; width:39px; height:39px; background:var(--ink); color:var(--white); border-radius:50%; }
+    .brand-mark svg { width:26px; height:26px; }
+    .nav { display:flex; align-items:center; gap:25px; font-size:13px; font-weight:650; }
+    .nav a { text-decoration:none; opacity:.8; }
+    .nav a:hover { opacity:1; }
+    .lang-btn { border:1px solid #b9cbb9; background:transparent; padding:9px 12px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:750; color:var(--ink); white-space:nowrap; }
+    .lang-btn:hover { background:var(--sage); }
+    .small-dot { display:inline-block; width:7px; height:7px; background:var(--accent); border-radius:100%; }
+    .hero { position:relative; overflow:hidden; padding:104px 0 106px; background:var(--deep); color:var(--white); isolation:isolate; }
+    .hero:after { position:absolute; content:""; inset:0; opacity:.23; z-index:-1; background-image:radial-gradient(#8da598 1px,transparent 1px); background-size:29px 29px; mask-image:linear-gradient(90deg, transparent 0%, #000 100%); }
+    .hero-grid { display:grid; grid-template-columns: 1.08fr .92fr; align-items:center; gap:42px; position:relative; }
+    .eyebrow { margin:0 0 26px; color:#c5d6c7; font-size:12px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+    .hero h1 { font-size:clamp(43px,5.1vw,76px); letter-spacing:-.065em; line-height:1.12; margin:0 0 30px; font-weight:760; max-width:740px; }
+    .hero h1 strong { color:#cfdfca; font-weight:inherit; }
+    .hero-lead { max-width:590px; color:#c2d0c6; font-size:17px; line-height:1.85; margin:0 0 33px; }
+    .hero-identity { border-left:3px solid var(--gold); padding-left:18px; margin-bottom:34px; }
+    .hero-identity .person { font-size:20px; font-weight:800; color:#f3f3ea; letter-spacing:.01em; }
+    .hero-identity .role { color:#aebfb3; font-size:13px; }
+    .btns { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:46px; padding:12px 19px; border-radius:10px; font-size:13px; font-weight:800; text-decoration:none; transition:transform .2s,background .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:#e3e8d9; color:var(--deep); }
+    .btn-outline { border:1px solid #61766b; color:#ecf0e6; }
+    .btn-outline:hover { background:#294a3b; }
+    .hero-art { position:relative; min-height:510px; display:flex; align-items:center; justify-content:center; }
+    .visual { width:100%; max-width:530px; filter:drop-shadow(0 22px 25px rgba(0,0,0,.16)); }
+    .floatnote { position:absolute; right:-14px; bottom:12px; background:#f0f0e4; color:var(--ink); border-radius:12px; padding:17px 21px; width:min(255px,80%); box-shadow:var(--shadow); }
+    .floatnote b { display:block; font-size:12px; letter-spacing:.10em; text-transform:uppercase; margin-bottom:5px; }
+    .floatnote span { display:block; font-size:12px; line-height:1.65; color:#506e60; }
+    .facts { background:var(--white); border-bottom:1px solid var(--line); }
+    .facts-inner { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .fact { padding:29px 25px 27px 0; }
+    .fact + .fact { padding-left:30px; border-left:1px solid var(--line); }
+    .fact-label { font-size:10px; text-transform:uppercase; font-weight:850; letter-spacing:.15em; color:var(--muted); }
+    .fact-value { display:block; font-size:15px; line-height:1.48; font-weight:800; margin-top:7px; }
+    section.content { padding:105px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:25px; margin-bottom:39px; }
+    .kicker { display:flex; align-items:center; gap:11px; text-transform:uppercase; font-size:11px; font-weight:900; letter-spacing:.16em; color:#9a684c; margin:0 0 13px; }
+    .kicker:before { content:""; width:25px; height:2px; background:var(--accent); display:block; }
+    h2 { margin:0; font-size:clamp(28px,3.15vw,44px); line-height:1.22; letter-spacing:-.048em; font-weight:800; }
+    .section-intro { max-width:630px; font-size:15px; color:#5d7266; line-height:1.9; margin:16px 0 0; }
+    .overline { color:var(--muted); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.13em; white-space:nowrap; }
+    .about-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; }
+    .about-main { background:var(--white); padding:44px; border-radius:var(--radius); box-shadow:0 6px 24px rgba(20,40,31,.035); border:1px solid var(--line); }
+    .about-main p { color:#4f6658; font-size:16px; line-height:1.97; margin:0 0 18px; }
+    .about-main p:last-child { margin:0; }
+    .about-aside { display:grid; gap:17px; }
+    .aside-card { background:var(--sage); padding:27px 30px; border-radius:18px; display:flex; gap:17px; align-items:flex-start; }
+    .aside-card.dark { background:var(--ink); color:#f6f5ea; }
+    .aside-icon { width:35px; height:35px; display:grid; place-items:center; background:rgba(255,255,255,.45); border-radius:10px; font-size:16px; flex-shrink:0; }
+    .aside-card.dark .aside-icon { background:#315546; }
+    .aside-card h3 { margin:0 0 5px; font-size:14px; }
+    .aside-card p { color:#5b705e; font-size:12px; margin:0; line-height:1.72; }
+    .aside-card.dark p { color:#c5d3c7; }
+    .research { background:#eaf0e6; }
+    .research-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:19px; }
+    .research-card { position:relative; min-height:305px; border:1px solid #d3dfd2; background:var(--white); padding:32px; border-radius:18px; overflow:hidden; }
+    .research-card:after { position:absolute; content:""; right:-52px; bottom:-76px; border:1px solid #e2e9df; width:190px; height:190px; border-radius:50%; box-shadow:0 0 0 23px #f7f8f3,0 0 0 24px #e3ece2,0 0 0 46px #fafbf7,0 0 0 47px #eef2e8; }
+    .research-card .num { font-family:Georgia,serif; font-size:31px; color:#a7bbaa; display:block; margin-bottom:39px; line-height:1; }
+    .research-card h3 { font-size:21px; font-weight:800; line-height:1.33; letter-spacing:-.035em; margin:0 0 12px; position:relative; z-index:1; }
+    .research-card p { color:#617568; font-size:13px; line-height:1.8; margin:0; position:relative; z-index:1; }
+    .projects { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .project { border:1px solid var(--line); border-radius:20px; overflow:hidden; background:var(--white); }
+    .project-top { height:168px; background:#dbe4d8; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+    .project-top.b { background:#e7e2d3; }
+    .project-top.c { background:#d8e5e1; }
+    .project-top svg { width:100%; height:100%; }
+    .project-info { padding:28px 30px 33px; }
+    .tag { display:inline-block; font-size:10px; font-weight:900; letter-spacing:.09em; text-transform:uppercase; padding:5px 9px; border:1px solid #d5d9cb; border-radius:100px; color:#677964; margin-bottom:12px; }
+    .project-info h3 { font-size:21px; letter-spacing:-.025em; margin:0 0 10px; line-height:1.35; }
+    .project-info p { color:#617165; font-size:13px; line-height:1.87; margin:0; }
+    .project-wide { grid-column:span 2; display:grid; grid-template-columns: .38fr .62fr; }
+    .project-wide .project-top { height:auto; min-height:240px; }
+    .project-wide .project-info { display:flex; justify-content:center; flex-direction:column; padding:40px; }
+    .evidence { background:var(--deep); color:#f7f7ef; }
+    .evidence .section-intro { color:#b6c8ba; }
+    .evidence-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:27px; }
+    .panel { border-radius:19px; padding:35px; border:1px solid #486254; background:#1c392d; }
+    .panel.light { background:#f5f3e9; border-color:#f5f3e9; color:var(--ink); }
+    .panel h3 { margin:0 0 22px; font-size:19px; letter-spacing:-.02em; }
+    .source { padding:16px 0; border-top:1px solid #496155; }
+    .source:first-of-type { border-top:0; }
+    .panel.light .source { border-color:#d6ddcf; }
+    .source-top { font-weight:760; font-size:13px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .source p { color:#b9c9bb; font-size:12px; line-height:1.75; margin:5px 0 0; }
+    .panel.light .source p { color:#667466; }
+    .source a { color:#cfddc7; text-decoration:underline; text-underline-offset:4px; }
+    .panel.light .source a { color:#294f40; }
+    .source .arrow { color:#e8caa2; font-size:19px; text-decoration:none; }
+    .tofill { display:block; border:1px dashed #a4b8a5; border-radius:9px; padding:11px 13px; font-size:12px; color:#657967; background:#fffefa; margin-top:9px; overflow-wrap:anywhere; }
+    .notice { margin-top:23px; padding:18px 20px; background:#dfe8d8; border-radius:11px; font-size:12px; line-height:1.85; color:#4e6555; }
+    .contact-section { background:var(--paper); }
+    .contact-box { background:var(--sage); border-radius:23px; padding:60px; display:flex; justify-content:space-between; align-items:center; gap:33px; }
+    .contact-box h2 { max-width:670px; margin-bottom:16px; }
+    .contact-box p { font-size:14px; max-width:670px; color:#5e7465; line-height:1.8; }
+    .contact-actions { display:flex; flex-direction:column; gap:10px; flex-shrink:0; }
+    .contact-actions .btn { min-width:180px; background:var(--ink); color:white; }
+    .contact-actions .btn.secondary { background:transparent; color:var(--ink); border:1px solid #859f86; }
+    .footer { border-top:1px solid var(--line); background:var(--paper); padding:33px 0 50px; }
+    .footer-inner { display:flex; align-items:start; gap:24px; justify-content:space-between; }
+    .footer p { color:#7a877a; font-size:11px; max-width:780px; line-height:1.83; margin:0; }
+    .footer small { color:#7a877a; white-space:nowrap; font-size:11px; }
+    [hidden] { display:none!important; }
+    @media (max-width:900px) { .hero {padding:75px 0 88px} .hero-grid{grid-template-columns:1fr} .hero-art{max-width:580px;margin:auto;width:100%;min-height:380px} .visual{max-width:460px} .floatnote{bottom:-12px;right:0} .about-grid,.evidence-grid{grid-template-columns:1fr} .research-card{padding:25px} .contact-box{padding:45px;align-items:start;flex-direction:column} .contact-actions{flex-direction:row} }
+    @media (max-width:650px) { .wrap{padding:0 20px} .topbar-inner{min-height:70px} .nav a{display:none} .nav{gap:0} .brand{font-size:10px} .brand-mark{width:34px;height:34px} .hero {padding:66px 0 72px} .hero h1{font-size:44px} .hero-lead{font-size:15px} .hero-art{min-height:325px} .visual{width:96%} .floatnote{right:0;bottom:-12px;padding:11px 14px;max-width:200px} .floatnote span{font-size:10px} .facts-inner{grid-template-columns:1fr} .fact,.fact+.fact{padding:18px 0;border-left:0;border-top:1px solid var(--line)} .fact:first-child{border-top:0} .fact-label{font-size:9px} .fact-value{font-size:14px} section.content{padding:71px 0} .section-head{display:block} .overline{display:none} .about-main{padding:26px} .about-main p{font-size:14px} .research-grid,.projects{grid-template-columns:1fr} .research-card{min-height:260px} .research-card .num{margin-bottom:25px} .project-wide{grid-column:span 1;display:block} .project-wide .project-top{height:168px;min-height:0} .project-wide .project-info{padding:28px 30px 33px} .panel{padding:25px} .contact-box{padding:31px 24px} .contact-actions{width:100%;flex-direction:column} .footer-inner{flex-direction:column} .footer small{white-space:normal} }
+    @media (prefers-reduced-motion:reduce) {html{scroll-behavior:auto} .btn{transition:none}}
+    @media print { .topbar,.btns,.contact-actions,.skip{display:none!important} body{background:white;color:#10271d;-webkit-print-color-adjust:exact;print-color-adjust:exact} .hero{padding:35px 0;color:white} .hero-art{display:none} .hero-grid,.about-grid,.evidence-grid{display:block} section.content{padding:34px 0} .research-grid{display:grid} .research-card{min-height:200px} .projects{display:block} .project{break-inside:avoid;margin-bottom:10px} .project-top{height:90px} .project-wide .project-top{display:none} .panel{margin:12px 0} .footer{padding-top:10px} }
+    .pub-section { background: #f3f5ed; }
+    .publication-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+    .publication-item { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:18px; background:var(--white); padding:30px 31px; gap:10px; min-width:0; }
+    .publication-item h3 { font-size:19px; line-height:1.42; letter-spacing:-.026em; margin:0; }
+    .publication-item .metadata { margin:0; color:var(--muted); font-size:12px; }
+    .publication-item .pub-summary { margin:0; color:#5d7266; font-size:13px; }
+    .publication-item .pub-link { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:800; text-decoration-thickness:1px; text-underline-offset:4px; margin-top:auto; padding-top:10px; overflow-wrap:anywhere; }
+    .publication-item .label { align-self:flex-start; border-radius:100px; padding:4px 9px; background:#eaf0e5; color:#45684f; font-size:10px; font-weight:850; letter-spacing:.05em; }
+    .pub-note { border-left:3px solid #b77b58; padding:10px 14px; font-size:12px; color:#657667; background:#ecefe6; margin:22px 0 0; border-radius:0 7px 7px 0; }
+    .source-link { display:block; margin-top:9px; font-size:12px; line-height:1.7; overflow-wrap:anywhere; }
+    .profile-link-list a { display:block; line-height:1.65; margin:2px 0; }
+    .profile-link-list a + a { margin-top:9px; }
+    .profile-link-list strong { display:block; font-weight:800; }
+    .profile-link-list small { display:block; overflow-wrap:anywhere; font-size:11px; }
+    @media (max-width:650px) { .publication-list{grid-template-columns:1fr} .publication-item{padding:25px} }
+    @media print { .publication-item {break-inside:avoid} }
+  </style>
+<script type="application/ld+json">{
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Jeong-Woo Yoo",
+ "alternateName":["Jeongwoo Yoo", "유정우"],
+ "jobTitle":"Full-time Researcher",
+ "worksFor":{"@type":"Organization","name":"National Institute of Ecology","url":"https://www.nie.re.kr/"},
+ "email":"mailto:wildlife3028@nie.re.kr",
+ "sameAs":["https://orcid.org/0000-0001-5797-5720","https://www.researchgate.net/profile/Jeong-Woo-Yoo-2"]
+}</script>
+</head>
+<body>
+<a href="#main" class="skip" data-en="Skip to content" data-ko="본문으로 이동">Skip to content</a>
+<header class="topbar"><div class="wrap topbar-inner">
+  <a href="#top" class="brand" aria-label="Research profile home">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 7c13-6 17 7 7 8-11 1-9 11 1 10" stroke-linecap="round"/><circle cx="8" cy="7" r="2" fill="currentColor"/><circle cx="16" cy="25" r="2" fill="currentColor"/></svg></span>
+    <span>FIELD / SCIENCE<br><span style="font-weight:500;letter-spacing:.1em" data-en="INDEPENDENT RESEARCH PROFILE" data-ko="개인 연구자 프로필">INDEPENDENT RESEARCH PROFILE</span></span>
+  </a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#about" data-en="About" data-ko="소개">About</a>
+    <a href="#research" data-en="Research" data-ko="연구분야">Research</a>
+    <a href="#projects" data-en="Projects" data-ko="주요 연구">Projects</a>
+    <a href="#publications" data-en="Publications" data-ko="논문">Publications</a>
+    <a href="#evidence" data-en="Verification" data-ko="소속·실적 확인">Verification</a>
+    <button id="languageToggle" class="lang-btn" type="button" aria-label="Switch to Korean"><span class="small-dot"></span><span id="langLabel">한국어</span></button>
+  </nav>
+</div></header>
+<main id="main">
+<section id="top" class="hero"><div class="wrap hero-grid">
+  <div>
+    <p class="eyebrow" data-en="Endangered Species Recovery · Republic of Korea" data-ko="멸종위기종 복원 연구 · 대한민국">Endangered Species Recovery · Republic of Korea</p>
+    <h1><span data-en="Science for species." data-ko="현장에서 시작하는">Science for species.</span><br><strong data-en="Evidence for recovery." data-ko="복원의 과학.">Evidence for recovery.</strong></h1>
+    <p class="hero-lead" data-en="I lead independent studies connecting field ecology, spatial analysis, and applied conservation — turning evidence into practical strategies for threatened wildlife." data-ko="현장 생태조사와 공간분석, 보전·복원 연구를 연결하여 멸종위기 야생생물의 회복에 필요한 과학적 근거를 탐구합니다. 개별 연구의 기획과 수행을 독립적으로 주도합니다.">I lead independent studies connecting field ecology, spatial analysis, and applied conservation — turning evidence into practical strategies for threatened wildlife.</p>
+    <div class="hero-identity"><div class="person" id="heroName">Jeong-Woo Yoo</div><div class="role" data-en="Full-time Researcher · Independent Study Lead · National Institute of Ecology" data-ko="국립생태원 전임연구원 · 개별 연구 주도 연구자">Full-time Researcher · Independent Study Lead · National Institute of Ecology</div></div>
+    <div class="btns"><a class="btn btn-primary" href="#evidence"><span data-en="View credentials" data-ko="소속·연구근거 확인">View credentials</span><span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="https://orcid.org/0000-0001-5797-5720" target="_blank" rel="noopener noreferrer" data-en="View ORCID" data-ko="ORCID 프로필">View ORCID</a></div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg class="visual" viewBox="0 0 530 535" role="presentation">
+      <defs><linearGradient id="mapfill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#466d58"/><stop offset="1" stop-color="#203e32"/></linearGradient><linearGradient id="trackfill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b6d2b6"/><stop offset="1" stop-color="#668d70"/></linearGradient></defs>
+      <circle cx="272" cy="253" r="224" fill="none" stroke="#6f8f7d" stroke-opacity=".38" stroke-width="1" stroke-dasharray="3 10"/>
+      <circle cx="272" cy="253" r="190" fill="none" stroke="#6f8f7d" stroke-opacity=".22"/>
+      <path d="M253 48 C327 25 398 75 420 130 C456 187 466 270 434 320 C416 369 356 410 284 421 C194 439 126 381 111 316 C89 241 113 161 171 106 C190 85 217 65 253 48Z" fill="url(#mapfill)" stroke="#83a18b" stroke-width="2"/>
+      <g fill="none" stroke="#759781" stroke-opacity=".64" stroke-width="1.1">
+        <path d="M171 120 C224 77 311 81 354 116 C413 163 411 250 368 311 C336 371 257 398 193 355 C133 318 138 213 188 173 C246 122 325 138 350 197 C371 258 316 334 258 330 C212 329 190 290 209 249 C227 209 271 199 301 220"/>
+        <path d="M150 146 C210 95 303 108 344 143 C382 177 397 247 359 301 C320 355 252 377 206 342 C159 307 166 223 207 189"/>
+        <path d="M189 95 C247 61 323 96 379 149 C429 211 408 291 355 346 C295 405 208 394 151 326"/>
+        <path d="M151 192 C121 276 168 365 244 388 C314 408 375 373 399 306"/>
+        <path d="M237 151 C279 141 336 168 335 222 C335 276 299 309 260 305 C236 305 222 292 227 266"/>
+      </g>
+      <path d="M155 363 C177 339 159 316 183 298 C214 273 257 291 275 262 C291 239 272 213 298 188 C326 163 340 179 347 156" fill="none" stroke="url(#trackfill)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M155 363 C177 339 159 316 183 298 C214 273 257 291 275 262 C291 239 272 213 298 188 C326 163 340 179 347 156" fill="none" stroke="#e8efe1" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+      <circle cx="347" cy="156" r="17" fill="#ddb078"/><circle cx="347" cy="156" r="6" fill="#183b2e"/>
+      <circle cx="183" cy="298" r="8" fill="#f1cf9d" stroke="#294e3f" stroke-width="3"/>
+      <g stroke="#d7bd91" stroke-width="1.5" fill="none"><path d="M74 116h55M74 116v43"/><path d="M426 416h55M481 383v33"/></g>
+      <g fill="#f0dfbb" font-family="monospace" font-size="12"><text x="65" y="106">01 / FIELD</text><text x="408" y="437">02 / DATA</text><text x="91" y="470">ECOLOGICAL RESEARCH · 2026</text></g>
+      <circle cx="111" cy="222" r="4" fill="#d6b287"/><circle cx="395" cy="343" r="4" fill="#d6b287"/>
+      <path d="M111 222L71 239M395 343L458 356" stroke="#d6b287" stroke-width="1"/>
+    </svg>
+    <div class="floatnote"><b data-en="RESEARCH APPROACH" data-ko="연구 접근 방식">RESEARCH APPROACH</b><span data-en="Field observations → reproducible analysis → conservation decisions" data-ko="현장 관측 → 재현 가능한 분석 → 보전 의사결정">Field observations → reproducible analysis → conservation decisions</span></div>
+  </div>
+</div></section>
+<section class="facts"><div class="wrap facts-inner">
+  <div class="fact"><span class="fact-label" data-en="Institutional affiliation" data-ko="소속기관">Institutional affiliation</span><strong class="fact-value" data-en="National Institute of Ecology (NIE)" data-ko="국립생태원 (NIE)">National Institute of Ecology (NIE)</strong></div>
+  <div class="fact"><span class="fact-label" data-en="Research unit" data-ko="소속 부서">Research unit</span><strong class="fact-value" data-en="Fish, Amphibian & Reptile Recovery Team" data-ko="어류·양서파충류복원팀">Fish, Amphibian & Reptile Recovery Team</strong></div>
+  <div class="fact"><span class="fact-label" data-en="Primary expertise" data-ko="핵심 연구분야">Primary expertise</span><strong class="fact-value" data-en="Herpetology · Recovery Ecology · Spatial Modeling" data-ko="양서·파충류 생태 · 종복원 · 공간분석">Herpetology · Recovery Ecology · Spatial Modeling</strong></div>
+</div></section>
+<section id="about" class="content"><div class="wrap">
+  <div class="section-head"><div><p class="kicker" data-en="01 / Research identity" data-ko="01 / 연구자 소개">01 / Research identity</p><h2 data-en="A field researcher with an independent research agenda." data-ko="현장 경험을 바탕으로 연구를 주도합니다.">A field researcher with an independent research agenda.</h2><p class="section-intro" data-en="A personal overview of research responsibilities, themes, and scientific work within an institutional affiliation." data-ko="기관 소속 연구자로서 수행하는 연구 역할과 관심 분야를 소개합니다.">A personal overview of research responsibilities, themes, and scientific work within an institutional affiliation.</p></div><span class="overline" data-en="RESEARCHER PROFILE" data-ko="연구자 프로필">RESEARCHER PROFILE</span></div>
+  <div class="about-grid"><div class="about-main"><p data-en="I am a full-time researcher affiliated with the National Institute of Ecology (NIE), Republic of Korea, working in the Fish, Amphibian and Reptile Recovery Team. My research focuses on the ecology and conservation of endangered wildlife, with particular emphasis on amphibians and reptiles." data-ko="저는 국립생태원 멸종위기종복원센터 어류·양서파충류복원팀 소속 전임연구원으로서, 멸종위기 야생생물의 생태와 보전·복원에 관한 연구를 수행하고 있습니다. 특히 양서·파충류 생태와 현장 중심의 종복원에 관심이 있습니다.">I am a full-time researcher affiliated with the National Institute of Ecology (NIE), Republic of Korea, working in the Fish, Amphibian and Reptile Recovery Team. My research focuses on the ecology and conservation of endangered wildlife, with particular emphasis on amphibians and reptiles.</p><p data-en="Within my individual studies, I independently develop research questions, design field and analytical methods, carry out statistical and spatial analyses, and lead manuscript preparation. These responsibilities describe my scientific role in individual studies; they do not imply formal appointment as an institutional principal investigator." data-ko="개별 연구에서는 연구질문 설정, 조사·분석 설계, 통계 및 공간분석, 논문 작성을 독립적으로 기획하고 주도합니다. 이는 개별 연구에서 수행하는 역할을 설명하는 것으로, 기관의 공식 과제 연구책임자(PI) 임명을 의미하지 않습니다.">Within my individual studies, I independently develop research questions, design field and analytical methods, carry out statistical and spatial analyses, and lead manuscript preparation. These responsibilities describe my scientific role in individual studies; they do not imply formal appointment as an institutional principal investigator.</p></div>
+  <aside class="about-aside"><div class="aside-card"><span class="aside-icon" aria-hidden="true">◈</span><div><h3 data-en="Independent study leadership" data-ko="독립적 연구 수행">Independent study leadership</h3><p data-en="Research questions, study design, analysis, and scientific writing for individual studies." data-ko="개별 연구의 주제 선정부터 조사·분석, 논문 작성까지 주도">Research questions, study design, analysis, and scientific writing for individual studies.</p></div></div><div class="aside-card"><span class="aside-icon" aria-hidden="true">⌁</span><div><h3 data-en="Field-to-policy perspective" data-ko="현장과 정책의 연결">Field-to-policy perspective</h3><p data-en="Linking species observations and quantitative evidence to actionable conservation approaches." data-ko="현장 관측과 정량적 근거를 보전·복원 전략으로 연결">Linking species observations and quantitative evidence to actionable conservation approaches.</p></div></div><div class="aside-card dark"><span class="aside-icon" aria-hidden="true">✦</span><div><h3 data-en="Institutional affiliation" data-ko="기관 소속">Institutional affiliation</h3><p data-en="NIE affiliation is identified separately from independent study leadership. This site is privately maintained." data-ko="국립생태원 소속과 개별 연구 주도 역할을 구분해 소개하며, 이 페이지는 개인이 관리합니다.">NIE affiliation is identified separately from independent study leadership. This site is privately maintained.</p></div></div></aside></div>
+</div></section>
+<section id="research" class="content research"><div class="wrap"><div class="section-head"><div><p class="kicker" data-en="02 / Areas of expertise" data-ko="02 / 주요 연구 분야">02 / Areas of expertise</p><h2 data-en="Three connected research directions." data-ko="세 가지 연결된 연구 방향">Three connected research directions.</h2><p class="section-intro" data-en="Conservation work becomes more useful when field evidence, analytical methods, and recovery planning inform one another." data-ko="현장 연구, 정량적 분석, 종복원 실무가 서로 연결될 때 보전 연구의 활용도가 높아진다고 생각합니다.">Conservation work becomes more useful when field evidence, analytical methods, and recovery planning inform one another.</p></div></div>
+<div class="research-grid"><article class="research-card"><span class="num">01</span><h3 data-en="Endangered species conservation" data-ko="멸종위기종 보전·복원">Endangered species conservation</h3><p data-en="Field studies, habitat evaluation, captive propagation and recovery-related monitoring of threatened fauna, especially amphibians and reptiles." data-ko="멸종위기 양서·파충류의 현장 조사, 서식지 평가, 증식 및 복원 모니터링 관련 연구">Field studies, habitat evaluation, captive propagation and recovery-related monitoring of threatened fauna, especially amphibians and reptiles.</p></article>
+<article class="research-card"><span class="num">02</span><h3 data-en="Spatial ecology & risk modeling" data-ko="공간생태 및 위험도 분석">Spatial ecology & risk modeling</h3><p data-en="Species distribution modeling, geographic information systems, statistical inference, and spatial prioritization for conservation decisions." data-ko="종분포모형, 지리정보시스템, 통계분석을 활용한 생태적 위험과 보전 우선순위 평가">Species distribution modeling, geographic information systems, statistical inference, and spatial prioritization for conservation decisions.</p></article>
+<article class="research-card"><span class="num">03</span><h3 data-en="Wildlife–infrastructure interactions" data-ko="야생동물과 기반시설 상호작용">Wildlife–infrastructure interactions</h3><p data-en="Studying how wildlife interacts with human infrastructure and how ecological evidence can support risk mitigation without neglecting biodiversity." data-ko="야생동물과 인간 기반시설의 상호작용을 분석하고, 생물다양성을 고려한 위험 저감 방안을 모색">Studying how wildlife interacts with human infrastructure and how ecological evidence can support risk mitigation without neglecting biodiversity.</p></article></div>
+</div></section>
+<section id="projects" class="content"><div class="wrap"><div class="section-head"><div><p class="kicker" data-en="03 / Selected research work" data-ko="03 / 주요 연구 활동">03 / Selected research work</p><h2 data-en="Questions with real-world implications." data-ko="현장의 문제를 연구질문으로">Questions with real-world implications.</h2><p class="section-intro" data-en="Illustrative descriptions of studies I lead or contribute to. Bibliographic details should be checked against the final published record." data-ko="주도하거나 참여하는 연구의 주제를 정리했습니다. 구체적인 논문 서지정보는 최종 출판 기록을 기준으로 확인해야 합니다.">Illustrative descriptions of studies I lead or contribute to. Bibliographic details should be checked against the final published record.</p></div></div>
+<div class="projects"><article class="project"><div class="project-top"><svg viewBox="0 0 500 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="#74967c" stroke-width="1.5" fill="none" opacity=".6"><path d="M-20 70C100-20 174 177 302 40S495 17 530 86"/><path d="M-20 92C100 2 174 199 302 62S495 39 530 108"/><path d="M-20 114C100 24 174 221 302 84S495 61 530 130"/><path d="M-20 136C100 46 174 243 302 106S495 83 530 152"/></g><path d="M79 92C140 13 177 143 235 83S314 33 363 101S422 133 461 75" fill="none" stroke="#355845" stroke-width="12" stroke-linecap="round"/><circle cx="79" cy="92" r="13" fill="#b87b5b"/><circle cx="461" cy="75" r="9" fill="#f5e6cb"/></svg></div><div class="project-info"><span class="tag" data-en="Herpetology / Field research" data-ko="양서파충류 / 현장 연구">Herpetology / Field research</span><h3 data-en="Bibaribaem snake ecology and recovery" data-ko="비바리뱀 생태 및 복원 연구">Bibaribaem snake ecology and recovery</h3><p data-en="Research themes include detection and monitoring, habitat understanding, and life-history observations to inform long-term conservation and recovery planning." data-ko="출현 및 모니터링, 서식환경 평가, 생활사 관찰 등을 통해 장기적인 보전·복원 전략의 근거를 마련하는 연구입니다.">Research themes include detection and monitoring, habitat understanding, and life-history observations to inform long-term conservation and recovery planning.</p></div></article>
+<article class="project"><div class="project-top b"><svg viewBox="0 0 500 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="#9d9a80" opacity=".6" stroke-width="2"><path d="M-10 151L87 44L172 91L276 16L365 93L495 31" fill="none"/><path d="M-10 167L87 60L172 107L276 32L365 109L495 47" fill="none"/><path d="M71 0V170M210 0V170M349 0V170"/></g><g fill="#355c4a"><circle cx="87" cy="44" r="12"/><circle cx="172" cy="91" r="7"/><circle cx="276" cy="16" r="12"/><circle cx="365" cy="93" r="10"/></g><path d="M87 44L172 91L276 16L365 93" stroke="#b66d4b" stroke-width="4" fill="none" stroke-dasharray="8 6"/></svg></div><div class="project-info"><span class="tag" data-en="Spatial analysis / Risk mitigation" data-ko="공간 분석 / 위험 저감">Spatial analysis / Risk mitigation</span><h3 data-en="Snake-associated electrical infrastructure incidents" data-ko="뱀에 의한 전력설비 사고 분석">Snake-associated electrical infrastructure incidents</h3><p data-en="Independently led research on snake-related distribution-network incidents in South Korea, combining field incident records with spatial risk modeling and external validation. A related paper was accepted by Biology in 2026, and the researcher has supplied a DOI. Final publisher metadata should be checked independently before formal submission." data-ko="국내 뱀 관련 배전설비 사고 기록을 바탕으로 공간적 위험요인과 외부 검증을 분석한 연구입니다. 관련 논문은 2026년 Biology 게재가 확정되었고 연구자가 DOI를 제공했습니다. 공식 제출 전에 출판사 서지정보를 최종 확인할 필요가 있습니다.">Independently led research on snake-related distribution-network incidents in South Korea, combining field incident records with spatial risk modeling and external validation. A related paper was accepted by Biology in 2026, and the researcher has supplied a DOI. Final publisher metadata should be checked independently before formal submission.</p></div></article>
+<article class="project project-wide"><div class="project-top c"><svg viewBox="0 0 450 230" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="#7a9a8f" fill="none" opacity=".63"><path d="M-20 212Q80 50 184 204T460 35" stroke-width="4"/><path d="M-20 188Q80 26 184 180T460 11" stroke-width="2"/><path d="M-20 236Q80 74 184 228T460 59" stroke-width="2"/></g><g fill="#3e705c"><circle cx="82" cy="114" r="14"/><circle cx="182" cy="202" r="10"/><circle cx="305" cy="125" r="11"/></g><path d="M82 114L182 202L305 125" fill="none" stroke="#c08a64" stroke-width="3" stroke-dasharray="4 6"/></svg></div><div class="project-info"><div><span class="tag" data-en="Conservation planning / Climate change" data-ko="보전계획 / 기후변화">Conservation planning / Climate change</span><h3 data-en="Species distributions and future refugia" data-ko="종분포와 미래 기후피난처 연구">Species distributions and future refugia</h3><p data-en="Using ecological niche modeling and environmental information to investigate habitat suitability, future distribution changes, and conservation priorities under changing climate conditions." data-ko="생태적 지위모형과 환경정보를 활용하여 서식지 적합성, 기후변화에 따른 분포 변화, 향후 보전 우선지역 및 기후피난처를 연구합니다.">Using ecological niche modeling and environmental information to investigate habitat suitability, future distribution changes, and conservation priorities under changing climate conditions.</p></div></div></article></div>
+</div></section>
+<section id="publications" class="content pub-section"><div class="wrap">
+  <div class="section-head"><div><p class="kicker" data-en="04 / Selected publications" data-ko="04 / 주요 연구논문">04 / Selected publications</p><h2 data-en="Research you can trace." data-ko="확인 가능한 연구성과">Research you can trace.</h2><p class="section-intro" data-en="A selection of author-linked research, with public publisher and bibliographic records. See ORCID and ResearchGate for more publications." data-ko="저자 정보와 출판 기록을 확인할 수 있는 대표 연구성과입니다. 추가 논문은 ORCID와 ResearchGate에서 확인할 수 있습니다.">A selection of author-linked research, with public publisher and bibliographic records. See ORCID and ResearchGate for more publications.</p></div></div>
+  <div class="publication-list">
+    <article class="publication-item"><span class="label" data-en="2026 · Biology" data-ko="2026 · Biology">2026 · Biology</span><h3>Snake Electrocution on Power Distribution Infrastructure in South Korea: Species Composition, Spatiotemporal Patterns, and Spatial Risk Modelling</h3><p class="metadata">Jeongwoo Yoo · Jung-Hyun Lee</p><p class="pub-summary" data-en="Integrating national distribution-network incident records with species identification, temporal patterns, and externally validated spatial risk analysis." data-ko="전국 배전설비 사고기록과 종 식별, 시간 패턴, 외부검증 공간 위험도 분석을 결합한 연구입니다.">Integrating national distribution-network incident records with species identification, temporal patterns, and externally validated spatial risk analysis.</p><a class="pub-link" href="https://doi.org/10.3390/biology15211958" rel="noopener noreferrer" target="_blank" data-en="Author-supplied DOI ↗" data-ko="본인 제공 DOI ↗">Author-supplied DOI ↗</a></article>
+    <article class="publication-item"><span class="label">2024 · Water</span><h3>Movements and Home Ranges of an Endangered Freshwater Fish, Pseudobagrus brevicorpus, and the Impact of River Management</h3><p class="metadata">Jeongwoo Yoo et al. · <em>Water</em>, 16(23), 3440</p><p class="pub-summary" data-en="First-author research using movement and home-range evidence to evaluate a threatened freshwater fish and river-management impacts." data-ko="멸종위기 담수어류의 이동과 행동권 자료를 기반으로 하천 관리의 영향을 분석한 제1저자 연구입니다.">First-author research using movement and home-range evidence to evaluate a threatened freshwater fish and river-management impacts.</p><a class="pub-link" href="https://doi.org/10.3390/w16233440" rel="noopener noreferrer" target="_blank" data-en="View journal DOI ↗" data-ko="논문 DOI 보기 ↗">View journal DOI ↗</a></article>
+    <article class="publication-item"><span class="label">2023 · Journal of Environmental Impact Assessment</span><h3>Habitat Suitability Models of Endangered Wildlife Class II Mauremys reevesii in Gurye-gun, the Republic of Korea</h3><p class="metadata">Chang-Deuk Park · Jeongwoo Yoo et al.</p><p class="pub-summary" data-en="Habitat suitability assessment for endangered Reeves' turtles. The published author details include this researcher's NIE email and ORCID." data-ko="멸종위기 남생이 서식지 적합성 연구이며, 논문에는 국립생태원 이메일과 ORCID가 저자 정보로 함께 기재되어 있습니다.">Habitat suitability assessment for endangered Reeves' turtles. The published author details include this researcher's NIE email and ORCID.</p><a class="pub-link" href="https://doi.org/10.14249/eia.2023.32.2.83" rel="noopener noreferrer" target="_blank" data-en="View journal DOI ↗" data-ko="논문 DOI 보기 ↗">View journal DOI ↗</a></article>
+    <article class="publication-item"><span class="label">2021 · National Institute of Ecology</span><h3>Study on the Development of Endangered Species Captive Propagation Technique</h3><p class="metadata">NIE Research Report 2021-47 · Participating researcher: Jeong-Woo Yoo</p><p class="pub-summary" data-en="Institutional research report documenting team participation and the listed project PI, separately from this researcher's independent study leadership." data-ko="연구팀 참여와 공식 과제책임자 명단을 구분하여 확인할 수 있는 국립생태원 발행 연구보고서입니다.">Institutional research report documenting team participation and the listed project PI, separately from this researcher's independent study leadership.</p><a class="pub-link" href="https://www.nie.re.kr/nie/cmmn/file/fileDown.do?atchFileId=MFILE_000MjI2776XF566&amp;fileSn=1" rel="noopener noreferrer" target="_blank" data-en="View official NIE report ↗" data-ko="국립생태원 보고서 보기 ↗">View official NIE report ↗</a></article>
+  </div>
+  <p class="pub-note" data-en="Citation check: the supplied 2026 Biology DOI appears in a third-party index, but the publisher landing page was not accessible for independent verification on 10 November 2026. Verify its final metadata before submitting it as a formal publication record." data-ko="서지정보 확인: 2026년 Biology 논문 DOI는 외부 서지정보에서 확인되지만 2026년 11월 10일 기준 출판사 원문 페이지는 접근되지 않았습니다. 공식 검증자료로 제출하기 전에 최종 서지정보를 확인하세요.">Citation check: the supplied 2026 Biology DOI appears in a third-party index, but the publisher landing page was not accessible for independent verification on 10 November 2026. Verify its final metadata before submitting it as a formal publication record.</p>
+</div></section>
+<section id="evidence" class="content evidence"><div class="wrap"><div class="section-head"><div><p class="kicker" data-en="04 / Affiliation & verification" data-ko="04 / 소속 및 실적 검증">04 / Affiliation & verification</p><h2 data-en="Verifiable identity, transparent roles." data-ko="확인 가능한 소속, 명확한 연구 역할">Verifiable identity, transparent roles.</h2><p class="section-intro" data-en="This personal page links public records that identify the researcher, research unit, institutional email, and ORCID. Institutional evidence and individual descriptions of research leadership are presented separately." data-ko="성명, 연구 소속, 기관 이메일, ORCID를 확인할 수 있는 공개 학술자료를 연결했습니다. 기관 자료로 확인되는 사실과 본인이 설명하는 연구 주도 역할을 구분합니다.">This personal page links public records that identify the researcher, research unit, institutional email, and ORCID. Institutional evidence and individual descriptions of research leadership are presented separately.</p></div></div>
+<div class="evidence-grid"><div class="panel"><h3 data-en="Official institutional sources" data-ko="기관 공식 확인 자료">Official institutional sources</h3>
+<div class="source"><div class="source-top"><span data-en="National Institute of Ecology (NIE)" data-ko="국립생태원 공식 홈페이지">National Institute of Ecology (NIE)</span><a href="https://www.nie.re.kr/" target="_blank" rel="noopener noreferrer" aria-label="NIE official website opens in new tab" class="arrow">↗</a></div><p data-en="Official institution website; establishes the organization, not an individual's employment." data-ko="기관의 공식 웹사이트입니다. 기관 존재에 대한 근거이며, 개인 재직 여부를 단독 증명하지는 않습니다.">Official institution website; establishes the organization, not an individual's employment.</p></div>
+<div class="source"><div class="source-top"><span data-en="NIE organizational directory" data-ko="국립생태원 공식 조직도">NIE organizational directory</span><a href="https://www.nie.re.kr/nie/pgm/org/orgList.do?menuNo=200180" target="_blank" rel="noopener noreferrer" aria-label="NIE organization chart opens in new tab" class="arrow">↗</a></div><p data-en="The official organizational directory lists the Fish, Amphibian & Reptile Recovery Team." data-ko="기관 공식 조직도에서 어류·양서파충류복원팀의 소속을 확인할 수 있습니다.">The official organizational directory lists the Fish, Amphibian & Reptile Recovery Team.</p></div>
+<div class="source"><div class="source-top"><span data-en="NIE published research report (2021)" data-ko="국립생태원 발행 연구보고서(2021)">NIE published research report (2021)</span><a href="https://www.nie.re.kr/nie/cmmn/file/fileDown.do?atchFileId=MFILE_000MjI2776XF566&amp;fileSn=1" target="_blank" rel="noopener noreferrer" aria-label="NIE research report PDF" class="arrow">↗</a></div><p data-en="A National Institute of Ecology report names Jeong-Woo Yoo as a participating internal researcher in the relevant team; it identifies a different formal project PI." data-ko="국립생태원 발행 보고서에서 유정우 연구자가 해당 팀의 내부 연구원으로 기재되어 있습니다. 보고서의 공식 연구책임자는 별도로 표기되어 있습니다.">A National Institute of Ecology report names Jeong-Woo Yoo as a participating internal researcher in the relevant team; it identifies a different formal project PI.</p></div>
+<div class="source"><div class="source-top"><span data-en="Published author / email / ORCID match" data-ko="논문 저자명·기관 이메일·ORCID 일치">Published author / email / ORCID match</span><a href="https://journal.kci.go.kr/kseia/archive/articlePdf?artiId=ART002954178" target="_blank" rel="noopener noreferrer" aria-label="Journal paper PDF with author affiliation, email, and ORCID" class="arrow">↗</a></div><p data-en="The 2023 Journal of Environmental Impact Assessment article lists the author's Korean and English names, NIE affiliation, institutional email, and matching ORCID on its first page." data-ko="2023년 환경영향평가 학술논문 첫 페이지에 국·영문 성명, 국립생태원 소속, 기관 이메일과 동일한 ORCID가 기재되어 있습니다.">The 2023 Journal of Environmental Impact Assessment article lists the author's Korean and English names, NIE affiliation, institutional email, and matching ORCID on its first page.</p></div></div>
+<div class="panel light"><h3 data-en="Personal researcher identifiers" data-ko="개인 연구자 확인 자료">Personal researcher identifiers</h3>
+<div class="source"><div class="source-top"><span data-en="Institutional email (published author contact)" data-ko="기관 이메일 (학술논문 기재)">Institutional email (published author contact)</span></div><span class="tofill" id="evidenceEmail">wildlife3028@nie.re.kr</span></div>
+<div class="source"><div class="source-top"><span>ORCID / ResearchGate</span><span id="profilesStatus" style="color:#7b8c76; font-size:11px" data-en="Linked" data-ko="연결됨">Linked</span></div><span class="tofill" id="evidenceProfiles">ORCID / ResearchGate</span></div>
+<div class="source"><div class="source-top"><span data-en="2026 Biology article DOI (author supplied)" data-ko="2026 Biology 논문 DOI (본인 제공)">2026 Biology article DOI (author supplied)</span></div><span class="tofill" id="evidenceDoi">10.3390/biology15211958</span><p data-en="The submitted DOI appears in a third-party bibliography. Its publisher landing page could not be independently confirmed on 10 November 2026." data-ko="해당 DOI는 외부 서지정보에서 확인되지만 2026년 11월 10일 기준 출판사 원문 페이지는 독립적으로 확인하지 못했습니다.">The submitted DOI appears in a third-party bibliography. Its publisher landing page could not be independently confirmed on 10 November 2026.</p></div>
+<div class="notice" data-en="Role clarification: I independently lead my individual research studies, but I am not claiming a formal institutional PI appointment here. This independently maintained profile is not an official NIE webpage or institutional attestation." data-ko="연구 역할 안내: 개별 연구를 독립적으로 주도하지만, 이 페이지에서는 기관의 공식 과제 PI로 임명되었다고 주장하지 않습니다. 이 웹페이지는 국립생태원 공식 홈페이지나 기관 발급 증명서가 아닌 개인 연구자 소개 페이지입니다.">Role clarification: I independently lead my individual research studies, but I am not claiming a formal institutional PI appointment here. This independently maintained profile is not an official NIE webpage or institutional attestation.</div>
+</div></div></div></section>
+<section id="contact" class="content contact-section"><div class="wrap"><div class="contact-box"><div><p class="kicker" data-en="05 / Research connections" data-ko="05 / 연구 교류">05 / Research connections</p><h2 data-en="Let's connect through evidence and conservation." data-ko="연구와 보전을 위한 교류">Let's connect through evidence and conservation.</h2><p data-en="For research-related inquiries, use the verified institutional contact or professional researcher identifier supplied by the profile owner." data-ko="연구 관련 문의는 본인 확인을 거친 기관 이메일 또는 연구자 식별정보를 통해 연락할 수 있습니다.">For research-related inquiries, use the verified institutional contact or professional researcher identifier supplied by the profile owner.</p></div><div class="contact-actions"><a id="mailAction" class="btn" href="#evidence"><span data-en="Institutional contact" data-ko="기관 이메일 확인">Institutional contact</span><span aria-hidden="true">↗</span></a><button id="printAction" type="button" class="btn secondary" data-en="Save profile as PDF" data-ko="프로필 PDF 저장">Save profile as PDF</button></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><p data-en="Personal research profile, independently maintained. National Institute of Ecology and its organizational directory are linked for affiliation context only. This site does not speak on behalf of NIE, does not constitute official employment verification, and does not assert a formal institutional PI designation. For authoritative identity and employment verification, contact the institution directly." data-ko="본 페이지는 개인이 독립적으로 관리하는 연구자 프로필입니다. 국립생태원과 조직도 링크는 소속 맥락을 설명하기 위한 것으로, 본 웹페이지는 기관의 공식 입장을 대변하거나 공식 재직증명서 또는 기관 과제책임자 지정 증명이 아닙니다. 공식적인 재직·신원 확인은 기관을 통해 별도로 진행해야 합니다.">Personal research profile, independently maintained. National Institute of Ecology and its organizational directory are linked for affiliation context only. This site does not speak on behalf of NIE, does not constitute official employment verification, and does not assert a formal institutional PI designation. For authoritative identity and employment verification, contact the institution directly.</p><small>© <span id="year">2026</span> <span id="footerName">Jeong-Woo Yoo</span></small></div></footer>
+<script>
+// QUICK EDIT: Fill in ONLY real, verified information. Do not add a title or DOI unless confirmed.
+const PROFILE = {
+  nameEn: "Jeong-Woo Yoo",   // Research publications may spell it Jeongwoo Yoo
+  nameKo: "유정우",
+  institutionalEmail: "wildlife3028@nie.re.kr",
+  orcidUrl: "https://orcid.org/0000-0001-5797-5720",
+  researchGateUrl: "https://www.researchgate.net/profile/Jeong-Woo-Yoo-2",
+  scholarUrl: "",             // Add if the researcher supplies a confirmed profile link
+  selectedPaperDoi: "10.3390/biology15211958"   // Researcher-supplied; publisher metadata not independently verified
+};
+let language = 'en';
+function setLanguage(next) {
+  language = next;
+  document.documentElement.lang = next;
+  for (const node of document.querySelectorAll('[data-en][data-ko]')) node.textContent = node.dataset[next];
+  document.getElementById('heroName').textContent = next === 'ko' ? PROFILE.nameKo : PROFILE.nameEn;
+  document.getElementById('footerName').textContent = next === 'ko' ? PROFILE.nameKo : PROFILE.nameEn;
+  document.getElementById('langLabel').textContent = next === 'en' ? '한국어' : 'English';
+  document.getElementById('languageToggle').setAttribute('aria-label', next === 'en' ? 'Switch to Korean' : '영어로 전환');
+  const email = document.getElementById('evidenceEmail');
+  email.replaceChildren();
+  if (PROFILE.institutionalEmail) {
+    const a = document.createElement('a');
+    a.href = 'mailto:' + PROFILE.institutionalEmail;
+    a.textContent = PROFILE.institutionalEmail;
+    email.append(a);
+  } else email.textContent = next === 'en' ? '[Institutional email needed]' : '[기관 이메일 확인 필요]';
+  const profileLinks = [
+    { label: 'ORCID', url: PROFILE.orcidUrl },
+    { label: 'ResearchGate', url: PROFILE.researchGateUrl },
+    { label: 'Google Scholar', url: PROFILE.scholarUrl }
+  ].filter(item => Boolean(item.url));
+  const profiles = document.getElementById('evidenceProfiles');
+  profiles.classList.add('profile-link-list');
+  if (profileLinks.length) {
+    profiles.replaceChildren();
+    for (const item of profileLinks) {
+      const a = document.createElement('a');
+      a.href = item.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      const name = document.createElement('strong'); name.textContent = item.label;
+      const url = document.createElement('small'); url.textContent = item.url;
+      a.append(name,url);
+      profiles.append(a);
+    }
+  } else profiles.textContent = next === 'en' ? '[Researcher identifier needed]' : '[연구자 식별 정보 확인 필요]';
+  const doi = PROFILE.selectedPaperDoi.replace(/^https?:\/\/(dx\.)?doi\.org\//,'');
+  const out = document.getElementById('evidenceDoi');
+  if (doi) { const a = document.createElement('a');a.href='https://doi.org/'+encodeURI(doi);a.textContent='https://doi.org/'+doi;a.target='_blank';a.rel='noopener noreferrer';out.replaceChildren(a); }
+  else out.textContent = next === 'en' ? '10.3390/biology15211958' : '[최종 출판된 논문의 DOI 입력 필요]';
+  const mail = document.getElementById('mailAction');
+  if (PROFILE.institutionalEmail.includes('@')) mail.href='mailto:'+PROFILE.institutionalEmail;
+  else mail.href='#evidence';
+  document.title = (next === 'en' ? PROFILE.nameEn+' | Research Profile · NIE' : PROFILE.nameKo+' | 국립생태원 소속 개인 연구자 프로필');
+}
+document.getElementById('languageToggle').addEventListener('click',()=>setLanguage(language==='en'?'ko':'en'));
+document.getElementById('printAction').addEventListener('click',()=>window.print());
+document.getElementById('year').textContent = String(new Date().getFullYear());
+setLanguage('en');
+</script>
+</body>
+</html>
